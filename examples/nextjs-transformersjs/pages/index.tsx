@@ -33,6 +33,7 @@ export default function Home() {
     const embeddings = await Promise.all(
       phrases.map((phrase) => extract(extractor, phrase))
     );
+    console.log("EMBEDDINGS: ", embeddings);
 
     const data = embeddings.map((embeddings, i) => ({
       id: String(i),
